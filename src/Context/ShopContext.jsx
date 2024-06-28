@@ -1,7 +1,7 @@
 
 import { createContext, useState } from "react";
 import all_product from "../Comps/Assets/all_product";
-import * as api from "../../add"
+
 
 
 
@@ -20,7 +20,7 @@ const ShopContextProvider =(props)=>{
     const [cartItems,setCartItems] = useState(getDefaultCart())
     
     const addToCart = async (itemId)=>{
-        await api.addCart(itemId)
+      
         setCartItems((prev)=>({...prev,[itemId]:prev[itemId]+1}))
         console.log(cartItems)
     }
